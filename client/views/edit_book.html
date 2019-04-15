@@ -1,0 +1,33 @@
+<a href="#!/books">Go back</a>
+<div class="card">
+    <div class="card-header">
+        Edit book
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form ng-submit="updateBook()" ng-init="getBook()">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="book.name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" ng-model="book.description" name="description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <select name="genreId" ng-model="book.genreId" class="form-control">
+                            <option value="1">Художественная литература</option>
+                            <option value="2">Бизнес книги</option>
+                            <option value="3">Саморазцитие</option>
+                            <option value="4">Книги по психологии</option>
+                            <option value="5">Детская литература</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
